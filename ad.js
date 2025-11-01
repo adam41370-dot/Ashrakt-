@@ -4,7 +4,14 @@
 
 
 
- 
+  let el=document.querySelector(".scrool");
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+window.addEventListener("scroll",()=>{
+  let scrollTop=document.documentElement.scrollTop;
+  
+
+  el.style.width=`${(scrollTop/height)*100}%`;
+})
   
  
 
@@ -51,5 +58,6 @@ x.style.display="none";
 menu.style.display="block";
 closeBtn.style.display="none";
 }
+
 
 
